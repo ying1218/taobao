@@ -19,10 +19,67 @@ header {
   width: 100%;
   height: 35px; }
 
-#top{
+#top {
   width: 1190px;
   margin: 0 auto; }
 
 /****************头部导航***************/
+header {
+  background: #f5f5f5;
+  border: 1px solid #eee; }
+  header .top_area {
+    line-height: 35px;
+    padding: 0 6px; }
+    header .top_area:hover {
+      background: #fff; }
+    header .top_area span:nth-of-type(1) {
+      color: #3c3c3c; }
+    header .top_area .icon-icon1 {
+      font-weight: bold;
+      font-size: 14px; }
+  header .top_nav_l {
+    float: left; }
+    header .top_nav_l li {
+      float: left;
+      height: 35px; }
+    header .top_nav_l .login {
+      padding: 0 6px;
+      line-height: 35px;
+      margin-right: 20px; }
+      header .top_nav_l .login .login_l {
+        display: inline-block;
+        line-height: 35px;
+        color: #f22e00;
+        margin-right: 7px; }
+      header .top_nav_l .login .login_r {
+        color: #6c6c6c; }
+        header .top_nav_l .login .login_r:hover {
+          color: red; }
+    header .top_nav_l .phonetao {
+      margin-right: 20px; }
+      header .top_nav_l .phonetao:hover {
+        color: red; }
+      header .top_nav_l .phonetao a {
+        display: block;
+        height: 35px;
+        line-height: 35px; }
+        header .top_nav_l .phonetao a:hover {
+          color: red; }
+  header .top_nav_r {
+    float: right; }
+    header .top_nav_r li {
+      float: left;
+      line-height: 35px; }
+    header .top_nav_r .top_area:hover .icon-iconfontshoucangjia {
+      color: red; }
+    header .top_nav_r .top_area .icon-iconfontshoucangjia {
+      font-size: 12px; }
+    header .top_nav_r .top_pro .top_proin {
+      display: inline-block;
+      background: url();
+      padding-right: 20px;
+      margin: 0 6px; }
+    header .top_nav_r .top_pro:hover {
+      color: red; }
 
 /*# sourceMappingURL=style.css.map */

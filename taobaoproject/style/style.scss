@@ -29,20 +29,95 @@ header{
 /****************头部导航***************/
 header{
     background: #f5f5f5;
-    .top_nav_l li{
-        float: left;
-        height:35px;
-    }
-    .top_area{
-        width: 79px;
+    border:1px solid #eee;
+     .top_area{
+        
         line-height: 35px;
-        margin:0 6px;
+        padding:0 6px;
+       
+        &:hover{
+            background: #fff;
+        }
         span:nth-of-type(1){
            color:#3c3c3c;
+          
         }
         .icon-icon1{
             font-weight:bold;
+            font-size:14px;
         }
+       
+      }
+    
+    
+    .top_nav_l{
+        float: left;
+        li{
+        float: left;
+        height:35px;
+       }
+      
+        .login{
+            padding:0 6px;
+            line-height: 35px;
+            margin-right:20px;
+            .login_l{
+                display: inline-block;
+                line-height: 35px;
+                color:#f22e00;
+                margin-right:7px;
+             }
+             .login_r{
+                 color:#6c6c6c;
+                 &:hover{
+                   color:red;  
+                 }
+             }   
+        }
+        .phonetao{
+             margin-right:20px;
+                &:hover{
+                    color:red;
+                }
+                a{
+                    display: block;
+                    height:35px;
+                    line-height: 35px;
+                   &:hover{
+                       color:red;
+                   }
+                } 
+             }  
+    } 
+    .top_nav_r{
+        float: right;
+        li{
+           float: left;
+           line-height: 35px;
+        }
+        .top_area{
+            &:hover{
+                .icon-iconfontshoucangjia{
+                    color:red;
+                }
+            }
+            .icon-iconfontshoucangjia{
+                font-size:12px;
+            }
+        }
+        .top_pro{
+            
+            .top_proin{
+                display: inline-block;
+                background: url();
+                padding-right:20px;
+                margin:0 6px;
+            }
+            &:hover{
+                color:red;
+            }
+        }
+        
     }
 }
 
