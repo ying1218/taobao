@@ -1,0 +1,28 @@
+@charset "UTF-8";
+html, body, ul, li, h1, h2, h3, h4, h5, h6, p, dd, dl, dt, fieldset, form {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "微软雅黑";
+  font-size: 12px;
+  color: #333; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/****************base***************/
+header {
+  width: 100%;
+  height: 35px; }
+
+#top{
+  width: 1190px;
+  margin: 0 auto; }
+
+/****************头部导航***************/
+
+/*# sourceMappingURL=style.css.map */
