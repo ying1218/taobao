@@ -11,6 +11,9 @@ body{
 li{
     list-style: none;
 }
+em{
+    font-style: normal;
+}
 a{
     text-decoration: none;
 }
@@ -19,11 +22,11 @@ input{
     outline: none;
 }
 /****************base***************/
-header,#discount_wrap{
+header,#discount_wrap,#content{
     width:100%;
     
 }
-#top,.discount,.search{
+#top,.discount,.search,.market,.top_line{
     width:1190px;
     margin:0 auto;
 }
@@ -35,17 +38,112 @@ header{
     background: #f5f5f5;
     height:35px;
     border:1px solid #eee;
+    
+/****************头部左边***************/    
      .top_area{
         
+         border-left:1px solid #f5f5f5;
+         border-right:1px solid #f5f5f5;
+        position: relative;
         line-height: 35px;
         padding:0 6px;
-       
+//      overflow: hidden;
+       ul{
+            border:1px solid #eee;
+           border-top:0;
+           background: #fff;
+           position: absolute;
+           display: none;
+           z-index: 1;
+           padding:10px 0;
+           li{
+               &:hover{
+                  background:#f5f5f5 ;
+              } 
+           }
+       }
+       .top_arealists{           
+           width:250px;
+           height:268px;
+           left:0;
+           overflow-y: scroll;
+           overflow-x:hidden;
+           li{
+              padding-left:8px;
+             height:30px;
+              line-height: 30px;
+               width:242px;
+              
+           }
+       }
+        .top_me{
+           left:-1px;
+           display: none;
+           
+            li{
+              width: 74px;
+               height:28px;
+               line-height: 28px;
+               padding:0 6px;
+               &:hover{
+                  background:#f5f5f5 ;
+              } 
+            }
+        }
+        .top_cart{
+            left: 0;
+            width: 268px;
+            padding-left:44px;
+            padding-top:18px;
+            display: none;
+            li{
+                height:38px;
+                line-height: 26px;
+                a{
+                  display: inline-block;
+                  width: 104px;
+                  height: 25px;
+                  background: #ff4400;
+                  border-radius: 5px;
+                  text-align: center;
+                  color:white;
+                }
+                &:hover{
+                    background: #fff;
+                }
+            }
+        }
+        .top_mec{
+            left: 0;
+            width:72px;
+            li{
+                padding:0 6px;
+            }
+        }
+        .top_x{
+            left: 0;
+           
+            li{
+               width:64px;
+               padding:0 6px; 
+            }
+        }
+        .top_wnav{
+            width:1190px;
+            height:230px;
+            right: 0;
+            li{
+                width:222px;
+            }
+        }
         &:hover{
             background: #fff;
+            border: 1px solid #eee;
+            border-top:0 ;
+            border-bottom:0 ;
         }
         span:nth-of-type(1){
            color:#3c3c3c;
-          
         }
         .icon-icon1{
             font-weight:bold;
@@ -237,12 +335,15 @@ header{
     }
 }
 /****************content***************/
-
+#content{
+   background: url("") no-repeat;
+}
 
 
 /****************search***************/
 .search{
-       
+     overflow: hidden; 
+     background: #fff; 
     h1{
         background: #ff1c3f; 
         height:140px;
@@ -254,6 +355,7 @@ header{
     .search_m{
         float: left;
         width: 630px;
+       
         position: relative;
         margin-right:75px;
         p{
@@ -309,6 +411,7 @@ header{
             }
         }
         .search_list{
+            background: #fff;
             margin:0;
             line-height: 30px;
             a{
@@ -325,4 +428,456 @@ header{
             height: 112px;
         }
     }
+}
+
+/****************轮播***************/
+.market{
+    height:550px;
+  
+    .market_l{
+        float: left;
+        width:188px;
+        border:1px solid #ff5000;
+        h2{
+            line-height: 30px;
+            background: #ff5000;
+            color:white;
+            text-align: center;
+            font-size:16px;
+        }
+       .market_list{
+           background: #fff;
+           padding-top:6px;
+           height:512px;
+           position: relative;
+           p{
+               line-height: 32px;
+               padding-left:25px;
+               font-size:14px;
+               a{
+                   color:#666;
+               }
+           }
+           .market_hid{
+           position: absolute;
+           width: 670px;
+           height: 518px;
+           border:2px solid #f94a14;
+           background: #fff;
+           top:0;
+           left:187px;
+           display: none;
+           padding:0 20px;
+           .market_hidl{
+               width:435px;
+               border-right:1px solid #f4f4f4;
+               height: 518px;
+               float: left;
+                .market_hidm{
+                 margin:0 10px;
+               h3{
+                   font-size:16px;
+                   padding-top:20px;
+                   color:#3c3c3c;
+                   a{
+                       float: right;
+                       font-size:12px;
+                       color:#3c3c3c;
+                   }
+               }
+            }
+           
+           }
+            .market_hidr {
+               float: right;
+               width:234px;
+               h3{
+                   padding-top:20px;
+                   color:#333;
+                   text-align: center;
+                   margin-bottom:12px;
+               }
+              .market_hidimg{
+                  img{
+                      width: 97px;
+                      height: 97px;
+                      margin-left:20px;
+                  }
+              } 
+           }
+          
+         } 
+           
+       } 
+      
+    }
+    .market_r{
+       float: left;
+       background: #f4f4f4;
+       .market_title{
+           ul{
+               float: left;
+               background: url("" no-repeat);
+               li{
+                   float: left;
+                   a{
+                     display: block;
+                     height:30px;
+                     line-height:30px;
+                     font-size:14px;
+                     color:white;  
+                   }
+                  
+               }
+           }
+           .market_titlel{
+               overflow: hidden;
+               a{
+                   padding:0 12px;
+               }
+               background: url("https://img.alicdn.com/tfs/TB1zA6dcGagSKJjy0FbXXa.mVXa-408-62.png_200x200");
+           }
+          .market_titlem{
+              background: #ff8f00;
+              a{
+                   padding:0 7px;
+              }
+          } 
+         .market_titler{
+          background: #ff8f00;
+          width: 270px; 
+          height:30px;
+          line-height: 30px;
+          color:white; 
+         }
+       }
+       .market_rcont{
+           width:998px;
+           height:530px;
+        .market_rcontr{
+            width: 710px;
+            height: 520px;
+//          overflow: hidden;
+            float: left;
+        #sliderBox{
+            float: left;
+            width:518px;
+            height:280px;
+            position: relative;
+            overflow: hidden;
+            margin:10px;
+            ul{
+              overflow: hidden; 
+               
+            }
+            #sliderList,#sliderNav{
+                position: absolute;
+            }
+            #sliderBtns{
+                display: none;
+                .btn{
+                position: absolute;
+                width:20px;
+                height:30px;
+                opacity: .5;
+                background: #333;
+               
+                line-height: 30px;
+                font-size: 40px;
+                color: white;
+                cursor: pointer;
+                font-size:16px;
+            }
+            .btn:first-child{
+                border-radius: 0 20px 20px 0 ;
+                left:0px;
+            }
+            .btn:last-child{
+                border-radius:20px 0 0 20px ;
+                right:0px;
+                text-align: right;
+            }
+            }
+            #sliderNav{
+                display: none;
+                margin-left:50%;
+                left:-35px;
+                bottom: 15px;
+                width:70px;
+                height:13px;
+                background: #555557;
+                text-align: center;
+               border-radius:5px;
+                .hover{
+                  background: #ff5000;  
+                }
+                li{
+                float: left;
+                width: 8px;
+                height: 8px;
+                margin: 3px 3px;
+                background: white;
+                color: red;
+                border-radius: 100%;
+                text-align: center;
+                line-height: 22px;
+                cursor: pointer;
+            }
+            }
+           img{
+                display: block;
+                border:none;
+            } 
+        }    
+        .market_rcontr_r{
+            float: left;
+            margin-top:10px;
+        }
+        
+        } 
+        .market_rtwo{
+           width: 710px;
+           height:220px;
+           overflow: hidden;
+           #sliderBox{
+               float: left;
+               p{
+                   color:#666;
+                   img{
+                       display: block;
+                       float: left;
+                       margin-right:12px;
+                   }
+                   span{
+                       em{
+                           font-style: normal;
+                       }
+                      float: right;
+                      margin-right:10px; 
+                   }
+               }
+               #sliderList{
+                 li{
+                 
+                   height: 198px; 
+                   background: #fff;
+               }  
+               }
+               
+           } 
+        }  
+       .market_rcontz{
+           width:288px;
+           height: 510px;
+           background: #fff;
+           float: right;
+           margin-top:10px;
+          .taobaby{
+              height: 145px;
+              width:288px;
+              background: url("https://img.alicdn.com/tfs/TB18UDmhqagSKJjy0FgXXcRqFXa-290-154.png") no-repeat;
+              
+              p{
+                  text-align: center;
+                  img{
+                      display: block;
+                       height: 50px;
+                       width: 50px;
+                       border-radius: 50%;
+                       margin:6px 0 6px 120px ; 
+                  }
+                    
+                    em{
+                        display: block;
+                        font-style: normal;
+                    }
+                     .a_first{
+                         margin-left: 45px;
+                         margin-right: 6px;
+                     }
+                      span{
+                          display:block;
+                          width: 100px;
+                          height:16px;
+                          background:#ffe4db;
+                          border-radius:8px;
+                          float:left;
+                          color:#ff5000;
+                          font-size:12px;
+                  }
+                  a{
+                         display:block;
+                          width: 92px;
+                          height:25px;
+                          line-height: 25px;
+                          background:#ff5601;
+                          border-radius:4px;
+                          float:left;
+                          color:#fff;
+                          font-size:14px; 
+                          margin-top:12px;
+                          margin-left:6px;
+                  }
+                  #market_login{
+                     margin-left:15px; 
+                  }
+                  #market_register{
+                     width: 75px;  
+                  }
+                  #market_shop{
+                      width: 75px;
+                  }
+              }
+          } 
+          .taobaby_n {
+              height:26px;
+              line-height: 26px;
+              background: #ffe4dd;
+              text-align: center;
+              a{
+                   color:#ff4400;
+              }
+              span{
+                  margin-left:30px;
+                  font-size:12px;
+              }
+          }
+          .notice{
+              padding:18px 20px 0;
+              height:89px;
+              .notice_title{
+                  overflow: hidden;
+                 li{
+                    margin-left:25px;
+                    float: left;
+                    margin-bottom:12px;
+                    a{
+                        color:#3c3c3c;
+                        &:hover{
+                        border-bottom:2px solid #ff4400; 
+                        font-weight: bold;
+                     }  
+                    }
+                   
+                    &:nth-last-child{
+                        margin-left:0;
+                    }
+                    
+                 } 
+              }
+             .notice_news_c{
+                 overflow: hidden;
+                 position: absolute;
+                 p{
+                     line-height: 26px;
+                     
+                     a{
+                         color:#3c3c3c;
+                         &:hover{
+                             color:#ff4400;
+                         }
+                     }
+                 }
+             }
+          }
+          .notice_n{
+              background: #f4f4f4;
+             border:1px solid #f4f4f4;
+             border-right:0;
+             border-left:0;
+              height:224px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                width: 69px;
+                height: 72px;
+                border:1px solid #fff;
+                span{
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                    margin-bottom:10px;
+                    background: url("https://img.alicdn.com/tfs/TB1eiXTXlTH8KJjy0FiXXcRsXXa-24-595.png");
+                }
+                &:hover{
+                    border:1px solid #ff4400;
+                }
+            } 
+          }
+          
+       }
+       } 
+    }
+}
+/****************淘宝头条***************/
+.top_line{
+    background:#f4f4f4;
+    height:112px;
+   .top_linel{
+       margin-top:12px;
+       height:100px;
+       width: 890px;
+       background:#fff;
+       float: left;
+        h5{
+            padding-left:20px;
+            font-weight: 100;
+           float: left;
+           color:#999;
+           width: 180px;
+           img{
+               margin-top:28px;
+           }
+           span{
+               margin-top:10px;
+              display: block; 
+           }
+       } 
+       .top_linel_m{
+           width: 690px;
+           height: 96px;
+           padding-top:16px;
+           float: right;
+           img{
+               display: block;
+               float: left;
+               width: 130px;
+               height: 71px;
+           }
+               .top_linel_txt{
+                   width: 528px;
+                   float: right;
+                   padding-left:12px;
+                  .top_linel_mt{
+                   font-size:16px;
+                   line-height:30px;
+                   color:#333;
+                   a{
+                       float: right;
+                       color:#999;
+                       margin-right:20px ;
+                       font-size:12px;
+                   }
+               }
+               .top_linel_mp{
+                 width: 514px;  
+                   color:#999;
+                   
+               } 
+               
+           }
+       }
+   }
+   .top_liner{
+       width: 290px;
+       height: 111px;
+       background: #fff;
+       float: right;
+   }   
 }

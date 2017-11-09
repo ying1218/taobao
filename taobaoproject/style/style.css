@@ -11,6 +11,9 @@ body {
 li {
   list-style: none; }
 
+em {
+  font-style: normal; }
+
 a {
   text-decoration: none; }
 
@@ -19,10 +22,10 @@ input {
   outline: none; }
 
 /****************base***************/
-header, #discount_wrap {
+header, #discount_wrap, #content {
   width: 100%; }
 
-#top, .discount, .search {
+#top, .discount, .search, .market, .top_line {
   width: 1190px;
   margin: 0 auto; }
 
@@ -30,12 +33,85 @@ header, #discount_wrap {
 header {
   background: #f5f5f5;
   height: 35px;
-  border: 1px solid #eee; }
+  border: 1px solid #eee;
+  /****************头部左边***************/ }
   header .top_area {
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    position: relative;
     line-height: 35px;
     padding: 0 6px; }
+    header .top_area ul {
+      border: 1px solid #eee;
+      border-top: 0;
+      background: #fff;
+      position: absolute;
+      display: none;
+      z-index: 1;
+      padding: 10px 0; }
+      header .top_area ul li:hover {
+        background: #f5f5f5; }
+    header .top_area .top_arealists {
+      width: 250px;
+      height: 268px;
+      left: 0;
+      overflow-y: scroll;
+      overflow-x: hidden; }
+      header .top_area .top_arealists li {
+        padding-left: 8px;
+        height: 30px;
+        line-height: 30px;
+        width: 242px; }
+    header .top_area .top_me {
+      left: -1px;
+      display: none; }
+      header .top_area .top_me li {
+        width: 74px;
+        height: 28px;
+        line-height: 28px;
+        padding: 0 6px; }
+        header .top_area .top_me li:hover {
+          background: #f5f5f5; }
+    header .top_area .top_cart {
+      left: 0;
+      width: 268px;
+      padding-left: 44px;
+      padding-top: 18px;
+      display: none; }
+      header .top_area .top_cart li {
+        height: 38px;
+        line-height: 26px; }
+        header .top_area .top_cart li a {
+          display: inline-block;
+          width: 104px;
+          height: 25px;
+          background: #ff4400;
+          border-radius: 5px;
+          text-align: center;
+          color: white; }
+        header .top_area .top_cart li:hover {
+          background: #fff; }
+    header .top_area .top_mec {
+      left: 0;
+      width: 72px; }
+      header .top_area .top_mec li {
+        padding: 0 6px; }
+    header .top_area .top_x {
+      left: 0; }
+      header .top_area .top_x li {
+        width: 64px;
+        padding: 0 6px; }
+    header .top_area .top_wnav {
+      width: 1190px;
+      height: 230px;
+      right: 0; }
+      header .top_area .top_wnav li {
+        width: 222px; }
     header .top_area:hover {
-      background: #fff; }
+      background: #fff;
+      border: 1px solid #eee;
+      border-top: 0;
+      border-bottom: 0; }
     header .top_area span:nth-of-type(1) {
       color: #3c3c3c; }
     header .top_area .icon-icon1 {
@@ -171,71 +247,421 @@ header {
       background: #ff1c3f; }
 
 /****************content***************/
+#content {
+  background: url("") no-repeat; }
+
 /****************search***************/
-.search h1 {
-  background: #ff1c3f;
-  height: 140px;
-  width: 190px;
-  padding-top: 24px;
-  margin-right: 68px;
-  float: left; }
-.search .search_m {
-  float: left;
-  width: 630px;
-  position: relative;
-  margin-right: 75px; }
-  .search .search_m p {
-    height: 22px;
-    margin: 34px 0 0 17px; }
-    .search .search_m p a {
-      color: #ff4400;
-      display: inline-block;
-      text-align: center;
-      line-height: 22px;
-      margin-right: 5px;
-      height: 22px; }
-    .search .search_m p .search_baby {
-      width: 36px;
+.search {
+  overflow: hidden;
+  background: #fff; }
+  .search h1 {
+    background: #ff1c3f;
+    height: 140px;
+    width: 190px;
+    padding-top: 24px;
+    margin-right: 68px;
+    float: left; }
+  .search .search_m {
+    float: left;
+    width: 630px;
+    position: relative;
+    margin-right: 75px; }
+    .search .search_m p {
       height: 22px;
-      background: linear-gradient(to right, #ff8e00, #ff5200);
-      color: #fff;
-      border-radius: 5px 5px 0 0; }
-  .search .search_m .search_box {
-    width: 626px;
-    height: 36px;
-    border: 2px solid #ff5608;
-    border-radius: 20px;
-    line-height: 36px; }
-    .search .search_m .search_box .icon-fangdajing {
-      position: absolute;
-      left: 14px; }
-    .search .search_m .search_box input {
-      height: 30px;
-      width: 510px;
+      margin: 34px 0 0 17px; }
+      .search .search_m p a {
+        color: #ff4400;
+        display: inline-block;
+        text-align: center;
+        line-height: 22px;
+        margin-right: 5px;
+        height: 22px; }
+      .search .search_m p .search_baby {
+        width: 36px;
+        height: 22px;
+        background: linear-gradient(to right, #ff8e00, #ff5200);
+        color: #fff;
+        border-radius: 5px 5px 0 0; }
+    .search .search_m .search_box {
+      width: 626px;
+      height: 36px;
+      border: 2px solid #ff5608;
       border-radius: 20px;
-      margin-left: 8px;
-      float: left; }
-    .search .search_m .search_box .icon-camera {
-      margin-right: 18px; }
-    .search .search_m .search_box .search_btn {
-      display: inline-block;
-      width: 74px;
-      color: #fff;
-      font-size: 16px;
+      line-height: 36px; }
+      .search .search_m .search_box .icon-fangdajing {
+        position: absolute;
+        left: 14px; }
+      .search .search_m .search_box input {
+        height: 30px;
+        width: 510px;
+        border-radius: 20px;
+        margin-left: 8px;
+        float: left; }
+      .search .search_m .search_box .icon-camera {
+        margin-right: 18px; }
+      .search .search_m .search_box .search_btn {
+        display: inline-block;
+        width: 74px;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 0 20px 20px 0;
+        float: right;
+        background: linear-gradient(to right, #ff8e00, #ff5200); }
+    .search .search_m .search_list {
+      background: #fff;
+      margin: 0;
+      line-height: 30px; }
+      .search .search_m .search_list a {
+        color: #666; }
+      .search .search_m .search_list .search_j {
+        float: right; }
+  .search .search_r {
+    padding-top: 5px; }
+    .search .search_r img {
+      height: 112px; }
+
+/****************轮播***************/
+.market {
+  height: 550px; }
+  .market .market_l {
+    float: left;
+    width: 188px;
+    border: 1px solid #ff5000; }
+    .market .market_l h2 {
+      line-height: 30px;
+      background: #ff5000;
+      color: white;
       text-align: center;
-      border-radius: 0 20px 20px 0;
-      float: right;
-      background: linear-gradient(to right, #ff8e00, #ff5200); }
-  .search .search_m .search_list {
-    margin: 0;
-    line-height: 30px; }
-    .search .search_m .search_list a {
-      color: #666; }
-    .search .search_m .search_list .search_j {
+      font-size: 16px; }
+    .market .market_l .market_list {
+      background: #fff;
+      padding-top: 6px;
+      height: 512px;
+      position: relative; }
+      .market .market_l .market_list p {
+        line-height: 32px;
+        padding-left: 25px;
+        font-size: 14px; }
+        .market .market_l .market_list p a {
+          color: #666; }
+      .market .market_l .market_list .market_hid {
+        position: absolute;
+        width: 670px;
+        height: 518px;
+        border: 2px solid #f94a14;
+        background: #fff;
+        top: 0;
+        left: 187px;
+        display: none;
+        padding: 0 20px; }
+        .market .market_l .market_list .market_hid .market_hidl {
+          width: 435px;
+          border-right: 1px solid #f4f4f4;
+          height: 518px;
+          float: left; }
+          .market .market_l .market_list .market_hid .market_hidl .market_hidm {
+            margin: 0 10px; }
+            .market .market_l .market_list .market_hid .market_hidl .market_hidm h3 {
+              font-size: 16px;
+              padding-top: 20px;
+              color: #3c3c3c; }
+              .market .market_l .market_list .market_hid .market_hidl .market_hidm h3 a {
+                float: right;
+                font-size: 12px;
+                color: #3c3c3c; }
+        .market .market_l .market_list .market_hid .market_hidr {
+          float: right;
+          width: 234px; }
+          .market .market_l .market_list .market_hid .market_hidr h3 {
+            padding-top: 20px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 12px; }
+          .market .market_l .market_list .market_hid .market_hidr .market_hidimg img {
+            width: 97px;
+            height: 97px;
+            margin-left: 20px; }
+  .market .market_r {
+    float: left;
+    background: #f4f4f4; }
+    .market .market_r .market_title ul {
+      float: left;
+      background: url("" no-repeat); }
+      .market .market_r .market_title ul li {
+        float: left; }
+        .market .market_r .market_title ul li a {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+          color: white; }
+    .market .market_r .market_title .market_titlel {
+      overflow: hidden;
+      background: url("https://img.alicdn.com/tfs/TB1zA6dcGagSKJjy0FbXXa.mVXa-408-62.png_200x200"); }
+      .market .market_r .market_title .market_titlel a {
+        padding: 0 12px; }
+    .market .market_r .market_title .market_titlem {
+      background: #ff8f00; }
+      .market .market_r .market_title .market_titlem a {
+        padding: 0 7px; }
+    .market .market_r .market_title .market_titler {
+      background: #ff8f00;
+      width: 270px;
+      height: 30px;
+      line-height: 30px;
+      color: white; }
+    .market .market_r .market_rcont {
+      width: 998px;
+      height: 530px; }
+      .market .market_r .market_rcont .market_rcontr {
+        width: 710px;
+        height: 520px;
+        float: left; }
+        .market .market_r .market_rcont .market_rcontr #sliderBox {
+          float: left;
+          width: 518px;
+          height: 280px;
+          position: relative;
+          overflow: hidden;
+          margin: 10px; }
+          .market .market_r .market_rcont .market_rcontr #sliderBox ul {
+            overflow: hidden; }
+          .market .market_r .market_rcont .market_rcontr #sliderBox #sliderList, .market .market_r .market_rcont .market_rcontr #sliderBox #sliderNav {
+            position: absolute; }
+          .market .market_r .market_rcont .market_rcontr #sliderBox #sliderBtns {
+            display: none; }
+            .market .market_r .market_rcont .market_rcontr #sliderBox #sliderBtns .btn {
+              position: absolute;
+              width: 20px;
+              height: 30px;
+              opacity: .5;
+              background: #333;
+              line-height: 30px;
+              font-size: 40px;
+              color: white;
+              cursor: pointer;
+              font-size: 16px; }
+            .market .market_r .market_rcont .market_rcontr #sliderBox #sliderBtns .btn:first-child {
+              border-radius: 0 20px 20px 0;
+              left: 0px; }
+            .market .market_r .market_rcont .market_rcontr #sliderBox #sliderBtns .btn:last-child {
+              border-radius: 20px 0 0 20px;
+              right: 0px;
+              text-align: right; }
+          .market .market_r .market_rcont .market_rcontr #sliderBox #sliderNav {
+            display: none;
+            margin-left: 50%;
+            left: -35px;
+            bottom: 15px;
+            width: 70px;
+            height: 13px;
+            background: #555557;
+            text-align: center;
+            border-radius: 5px; }
+            .market .market_r .market_rcont .market_rcontr #sliderBox #sliderNav .hover {
+              background: #ff5000; }
+            .market .market_r .market_rcont .market_rcontr #sliderBox #sliderNav li {
+              float: left;
+              width: 8px;
+              height: 8px;
+              margin: 3px 3px;
+              background: white;
+              color: red;
+              border-radius: 100%;
+              text-align: center;
+              line-height: 22px;
+              cursor: pointer; }
+          .market .market_r .market_rcont .market_rcontr #sliderBox img {
+            display: block;
+            border: none; }
+        .market .market_r .market_rcont .market_rcontr .market_rcontr_r {
+          float: left;
+          margin-top: 10px; }
+      .market .market_r .market_rcont .market_rtwo {
+        width: 710px;
+        height: 220px;
+        overflow: hidden; }
+        .market .market_r .market_rcont .market_rtwo #sliderBox {
+          float: left; }
+          .market .market_r .market_rcont .market_rtwo #sliderBox p {
+            color: #666; }
+            .market .market_r .market_rcont .market_rtwo #sliderBox p img {
+              display: block;
+              float: left;
+              margin-right: 12px; }
+            .market .market_r .market_rcont .market_rtwo #sliderBox p span {
+              float: right;
+              margin-right: 10px; }
+              .market .market_r .market_rcont .market_rtwo #sliderBox p span em {
+                font-style: normal; }
+          .market .market_r .market_rcont .market_rtwo #sliderBox #sliderList li {
+            height: 198px;
+            background: #fff; }
+      .market .market_r .market_rcont .market_rcontz {
+        width: 288px;
+        height: 510px;
+        background: #fff;
+        float: right;
+        margin-top: 10px; }
+        .market .market_r .market_rcont .market_rcontz .taobaby {
+          height: 145px;
+          width: 288px;
+          background: url("https://img.alicdn.com/tfs/TB18UDmhqagSKJjy0FgXXcRqFXa-290-154.png") no-repeat; }
+          .market .market_r .market_rcont .market_rcontz .taobaby p {
+            text-align: center; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p img {
+              display: block;
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+              margin: 6px 0 6px 120px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p em {
+              display: block;
+              font-style: normal; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p .a_first {
+              margin-left: 45px;
+              margin-right: 6px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p span {
+              display: block;
+              width: 100px;
+              height: 16px;
+              background: #ffe4db;
+              border-radius: 8px;
+              float: left;
+              color: #ff5000;
+              font-size: 12px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p a {
+              display: block;
+              width: 92px;
+              height: 25px;
+              line-height: 25px;
+              background: #ff5601;
+              border-radius: 4px;
+              float: left;
+              color: #fff;
+              font-size: 14px;
+              margin-top: 12px;
+              margin-left: 6px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p #market_login {
+              margin-left: 15px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p #market_register {
+              width: 75px; }
+            .market .market_r .market_rcont .market_rcontz .taobaby p #market_shop {
+              width: 75px; }
+        .market .market_r .market_rcont .market_rcontz .taobaby_n {
+          height: 26px;
+          line-height: 26px;
+          background: #ffe4dd;
+          text-align: center; }
+          .market .market_r .market_rcont .market_rcontz .taobaby_n a {
+            color: #ff4400; }
+          .market .market_r .market_rcont .market_rcontz .taobaby_n span {
+            margin-left: 30px;
+            font-size: 12px; }
+        .market .market_r .market_rcont .market_rcontz .notice {
+          padding: 18px 20px 0;
+          height: 89px; }
+          .market .market_r .market_rcont .market_rcontz .notice .notice_title {
+            overflow: hidden; }
+            .market .market_r .market_rcont .market_rcontz .notice .notice_title li {
+              margin-left: 25px;
+              float: left;
+              margin-bottom: 12px; }
+              .market .market_r .market_rcont .market_rcontz .notice .notice_title li a {
+                color: #3c3c3c; }
+                .market .market_r .market_rcont .market_rcontz .notice .notice_title li a:hover {
+                  border-bottom: 2px solid #ff4400;
+                  font-weight: bold; }
+              .market .market_r .market_rcont .market_rcontz .notice .notice_title li:nth-last-child {
+                margin-left: 0; }
+          .market .market_r .market_rcont .market_rcontz .notice .notice_news_c {
+            overflow: hidden;
+            position: absolute; }
+            .market .market_r .market_rcont .market_rcontz .notice .notice_news_c p {
+              line-height: 26px; }
+              .market .market_r .market_rcont .market_rcontz .notice .notice_news_c p a {
+                color: #3c3c3c; }
+                .market .market_r .market_rcont .market_rcontz .notice .notice_news_c p a:hover {
+                  color: #ff4400; }
+        .market .market_r .market_rcont .market_rcontz .notice_n {
+          background: #f4f4f4;
+          border: 1px solid #f4f4f4;
+          border-right: 0;
+          border-left: 0;
+          height: 224px;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          .market .market_r .market_rcont .market_rcontz .notice_n li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            width: 69px;
+            height: 72px;
+            border: 1px solid #fff; }
+            .market .market_r .market_rcont .market_rcontz .notice_n li span {
+              display: block;
+              width: 24px;
+              height: 24px;
+              margin-bottom: 10px;
+              background: url("https://img.alicdn.com/tfs/TB1eiXTXlTH8KJjy0FiXXcRsXXa-24-595.png"); }
+            .market .market_r .market_rcont .market_rcontz .notice_n li:hover {
+              border: 1px solid #ff4400; }
+
+/****************淘宝头条***************/
+.top_line {
+  background: #f4f4f4;
+  height: 112px; }
+  .top_line .top_linel {
+    margin-top: 12px;
+    height: 100px;
+    width: 890px;
+    background: #fff;
+    float: left; }
+    .top_line .top_linel h5 {
+      padding-left: 20px;
+      font-weight: 100;
+      float: left;
+      color: #999;
+      width: 180px; }
+      .top_line .top_linel h5 img {
+        margin-top: 28px; }
+      .top_line .top_linel h5 span {
+        margin-top: 10px;
+        display: block; }
+    .top_line .top_linel .top_linel_m {
+      width: 690px;
+      height: 96px;
+      padding-top: 16px;
       float: right; }
-.search .search_r {
-  padding-top: 5px; }
-  .search .search_r img {
-    height: 112px; }
+      .top_line .top_linel .top_linel_m img {
+        display: block;
+        float: left;
+        width: 130px;
+        height: 71px; }
+      .top_line .top_linel .top_linel_m .top_linel_txt {
+        width: 528px;
+        float: right;
+        padding-left: 12px; }
+        .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mt {
+          font-size: 16px;
+          line-height: 30px;
+          color: #333; }
+          .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mt a {
+            float: right;
+            color: #999;
+            margin-right: 20px;
+            font-size: 12px; }
+        .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mp {
+          width: 514px;
+          color: #999; }
+  .top_line .top_liner {
+    width: 290px;
+    height: 111px;
+    background: #fff;
+    float: right; }
 
 /*# sourceMappingURL=style.css.map */

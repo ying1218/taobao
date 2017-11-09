@@ -5,6 +5,9 @@
 		<title>淘宝网 - 淘！我喜欢</title>
 		<link rel="stylesheet" href="style/style.css" type="text/css"/>
 		<link rel="stylesheet" href="iconfont/iconfont.css" type="text/css"/>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/home.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 <body>
 	<!-----------------头部导航---------------------->
@@ -16,9 +19,20 @@
 				<li class="top_area">
 					<span>中国大陆</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_arealists" style="display: none;">
+					<ul class="top_arealists">
 						<li>全球</li>
-	
+						<li>中国大陆</li>
+						<li>台湾</li>
+						<li>澳门</li>
+						<li>香港</li>
+						<li>韩国</li>
+						<li>马来西亚</li>
+						<li>澳大利亚</li>
+						<li>新加坡</li>
+						<li>新西兰</li>
+	                    <li>加拿大</li>
+	                    <li>美国</li>
+	                    <li>日本</li>
 					</ul>
 				</li>
 				<li class="login">
@@ -36,16 +50,17 @@
 				<li class="top_area">
 					<span class="color">我的淘宝</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_me" style="display: none;">
-						<li></li>
+					<ul class="top_me">
+						<li>已买到的宝贝</li>
+						<li>我的足迹</li>
 					</ul>
 				</li>
 				<li class="top_area">
 					<span class="iconfont icon-gouwuche4" style="font-size:12px;color:red;"></span>
 					<span class="color">购物车<b id="shop_cart" style="color:#f22e00">0</b></span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_cart" style="display: none;">
-						<li></li>
+					<ul class="top_cart">
+						<li>您购物车里还没有任何宝贝。<a href="">查看我的购物车</a></li>
 					</ul>
 				</li>
 				<li class="top_area">
@@ -53,36 +68,60 @@
 "></span>
 					<span class="color">收藏夹</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_me" style="display: none;">
-						<li></li>
+					<ul class="top_mec">
+						<li>收藏的宝贝</li>
+						<li>收藏的店铺</li>
 					</ul>
 				</li>
 				<li class="top_pro">
 					<span class="top_proin">商品分类</span><img src="img/top1.jpg" alt="" />
-					<ul class="top_goods" style="display: none;">
-						<li></li>
-					</ul>
 				</li>
 				<li class="top_area">
 					<span class="color">卖家中心</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_me" style="display: none;">
-						<li></li>
+					<ul class="top_me">
+						<li>免费开店</li>
+						<li>已卖出的宝贝</li>
+						<li>出售中的宝贝</li>
+						<li>卖家服务市场</li>
+						<li>卖家培训中心</li>
+						<li>体检中心</li>
+						<li>问商友</li>
 					</ul>
 				</li>
 				<li class="top_area">
 					<span class="color">联系客服</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_me" style="display: none;">
-						<li></li>
+					<ul class="top_me top_x">
+						<li>消费者客服</li>
+						<li>卖家客服</li>
 					</ul>
 				</li>
 				<li class="top_area">
 					<span class="iconfont icon-daohang1" style="font-size:10px;color:red;"></span>
 					<span class="color">网站导航</span>
 					<span class="iconfont icon-icon1"></span>
-					<ul class="top_me" style="display: none;">
-						<li></li>
+					<ul class="top_wnav">
+						<li>
+							<h4>主题市场</h4>
+							<p>
+							</p>
+						</li>
+						<li>
+							<h4>特色市场</h4>
+							<p>
+							</p>
+						</li>
+						<li>
+							<h4>阿里APP</h4>
+							<p>
+							</p>
+						</li>
+						<li>
+							<h4>精彩推荐集</h4>
+							<p>
+							</p>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -142,6 +181,7 @@
 	
 	<!-----------------content---------------------->
 	<div id="content">
+		
 	<!-----------------search---------------------->	
 		<div class="search">
 			<h1><img src="https://img.alicdn.com/tfs/TB1PdY9XZLJ8KJjy0FnXXcFDpXa-190-140.gif" alt="" /></h1>
@@ -154,13 +194,190 @@
 				<span class="iconfont icon-camera"></span>
 				<a href="" class="search_btn">搜索</a>
 			</div>
-			<p class="search_list"><a href="">半身裙</a><a href="">夹克外套</a><a href=""></a><a href=""></a><a href=""></a><a href=""></a><a class="search_j">更多<span style="16px">＞</span></a></p>
+			<p class="search_list"><a href="">半身裙</a><a href="">夹克外套</a><a href="">半身裙</a><a href="">夹克外套</a><a href="">夹克外套</a><a href="">夹克外套</a><a class="search_j">更多<span style="16px">＞</span></a></p>
 		</div>
 		<div class="search_r">
 		<img src="https://img.alicdn.com/tfs/TB1yeMsbS_I8KJjy0FoXXaFnVXa-120-120.gif" alt="" />
 		</div>
 		</div>
-
+     <!-----------------轮播---------------------->
+     <div class="market">
+     	<div class="market_l">
+     		<h2>主题市场</h2>
+     		<div class="market_list">
+     			<p><a href="">女装 /</a><a href="">男装  /</a><a href="">内衣 /</a><span>＞</span></p>
+<!------------隐藏的导航------------->
+     			<div class="market_hid">
+     			<div class="market_hidl">
+     				<div class="market_hidm">
+     				<h3>女装<a href="">更多 ></a></h3>
+     				<p></p>
+     			</div>
+     			<div class="market_hidm">
+     				<h3>女装<a href="">更多 ></a></h3>
+     				<p></p>
+     			</div>
+     			<div class="market_hidm">
+     				<h3>女装<a href="">更多 ></a></h3>
+     				<p></p>
+     			</div>
+     			</div>	
+     			<div class="market_hidr">
+     				<h3>猜你喜欢</h3>
+     				<ul class="market_hidimg">
+     					<li></li>
+     				</ul>
+     				
+     			</div>
+     			</div>
+     		</div>
+     		
+     	</div>
+<!--------------轮播外大框---------------->     	
+        <div class="market_r">
+  <!--------轮播区nav---------->
+        	<div class="market_title">	
+        		<ul class="market_titlel">
+        			<li><a href="">天猫</a></li>
+        			<li><a href="">聚划算</a></li>
+        			<li><a href="">天猫超市</a></li>
+        		</ul>
+        		<ul class="market_titlem">
+        			<li><a href="">淘抢购</a></li>
+        			<li><a href="">电器城</a></li>
+        			<li><a href="">司法拍卖</a></li>
+        			<li><a href="">中国质造</a></li>
+        			<li><a href="">兴农扶贫</a></li>
+        			<li><a href="">飞猪旅行</a></li>
+        			<li><a href="">智能生活</a></li>
+        			<li><a href="">苏宁易购</a></li>
+        		</ul>
+        		<ul class="market_titler">
+        		<li>距活动结束还有   天</li>	
+        		</ul>
+        	</div>
+        	
+<!------------轮播内容区--------------->        	
+        	<div class="market_rcont">
+<!------------轮播内容区右边---------------> 
+        		<div class="market_rcontr">
+  <!--    轮播图  		-->	
+        			<div id="sliderBox">
+			<ul id="sliderList">
+				<li><img src="https://img.alicdn.com/tfs/TB1_pUyar_I8KJjy1XaXXbsxpXa-520-280.jpg_q90_.webp"></li>
+				<li><img src="https://aecpm.alicdn.com/tfscom/TB17xU9iMMPMeJjy1XcXXXpppXa.jpg"></li>
+				<li><img src="https://img.alicdn.com/simba/img/TB1uHdwa9YH8KJjSspdSuwRgVXa.jpg"></li>
+				<li><img src="https://img.alicdn.com/simba/img/TB1CylsamYH8KJjSspdSuwRgVXa.jpg"></li>
+				<li><img src="https://img.alicdn.com/tfs/TB13YTLbcrI8KJjy0FhXXbfnpXa-520-280.jpg_q90_.webp"></li>
+			</ul>
+			<ul id="sliderNav">
+				<li></li><li></li><li></li><li></li><li></li>
+			</ul>
+			<div id="sliderBtns">
+				<div class="btn"><span class="iconfont icon-mjiantou-copy"></span></div>
+				<div class="btn"><span class="iconfont icon-iconfontyoujiantou"></span></div>
+			</div>
+		</div>
+		<div class="market_rcontr_r">
+			<img src="https://img.alicdn.com/tfs/TB1KeZfX8HH8KJjy0FbXXcqlpXa-160-280.jpg_290x290q90.jpg_.webp" alt="" />
+		</div>
+		<div class="market_rtwo">
+<!---------第二个轮播------------>
+        	<div id="sliderBox" style="width:520px;height:221px;margin:0 10px;">
+        		<p style="margin-bottom:5px"><img src="img/cat.jpg" alt="" />理想生活上天猫<span><em>1</em>/6</span></p>
+			    <ul id="sliderList" style="height:198px;">
+				<li><img style="height:198px;float:left;" src="https://img.alicdn.com/imgextra/i3/5/TB296UXppXXXXabXpXXXXXXXXXX_!!5-2-yamato.png?activityId=533&appid=3362_210x1000q90.jpg" alt="" />
+				<img src="https://img.alicdn.com/imgextra/i4/88/TB2igHicr5K.eBjy0FfXXbApVXa_!!88-0-yamato.jpg?activityId=1702&appid=3362&report_date=2016-11-10_210x1000q90.jpg" alt="" />
+	</li>
+				<li><img src="https://img.alicdn.com/imgextra/i3/47/TB2DBhcg3xlpuFjSszgXXcJdpXa_!!47-0-yamato.jpg?activityId=52469&positionId=5&appid=3362&report_date=2017-03-07_210x1000q90.jpg" alt="" /></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+			<div id="sliderBtns">
+				<div class="btn"><span class="iconfont icon-mjiantou-copy"></span></div>
+				<div class="btn"><span class="iconfont icon-iconfontyoujiantou"></span></div>
+			</div>
+		</div>	
+		<div class="market_rtwor">
+			<p style="margin-bottom:5px">今日热点</p>
+			<p><img src="https://img.alicdn.com/simba/img/TB1YuIdbef85uJjSZFtSuu4bVXa.jpg" alt="" /></p>
+		</div>
+        		</div>
+        		</div>
+        	<div class="market_rcontz">
+        		<div class="taobaby">
+        			<p>
+        				<img src="https://gw.alicdn.com/tps/i3/TB1yeWeIFXXXXX5XFXXuAZJYXXX-210-210.png_50x50.jpg" alt="" />
+        			<em>Hi!你好</em>
+        			<span class="a_first iconfont icon-taojinbi">淘金币抵钱</span>
+        			<span class="iconfont icon-victory-rotate">会员俱乐部</span>
+        			<a href="" id="market_login">登录</a>
+        			<a href="" id="market_register">注册</a>
+        			<a href="#" id="market_shop">开店</a>
+        			</p>
+        		</div>
+        		<p class="taobaby_n">
+        			<a href="#">网上有害信息举报专区<span class="iconfont icon-jiantou1"></span></a>
+        		</p>
+        		<div class="notice">
+        			<ul class="notice_title">
+        				<li><a href="#">公告</a></li>
+        				<li><a href="#">规则</a></li>
+        				<li><a href="#">论坛</a></li>
+        				<li><a href="#">安全</a></li>
+        				<li><a href="#">公益</a></li>
+        			</ul>
+        			<div class="notice_news">
+        				<div class="notice_news_c">
+        					<p><a href="#">揭幕史上最科技的猫晚</a> <a href="#">揭幕史上最科技的猫晚</a></p>
+        					<p><a href="#">揭幕史上最科技的猫晚</a> <a href="#">揭幕史上最科技的猫晚</a></p>
+        				</div>
+        			</div>
+        		</div>
+        		<ul class="notice_n">
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        			<li><span></span><em>充话费</em></li>
+        		</ul>
+        	</div>	
+        	</div>
+        </div>
+     </div>
+<!---------------淘宝头条-------------------->
+   <div class="top_line">
+   	  <div class="top_linel">
+   	  	<h5><img src="img/t1.jpg" alt="" /><span>让你的生活更有趣</span></h5>
+   	  	<div class="top_linel_m">
+   	  		<img src="" alt="" />
+   	  		<div class="top_linel_txt">
+   	  			<p class="top_linel_mt">配置确认，华为Mate10国行开启预定<a href="#">更多 ></a></p>
+   	  			<p class="top_linel_mp">离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启</p>
+   	  		</div>
+   	  	</div>
+   	  </div>
+   	  <div class="top_liner">
+   	  	
+   	  </div>
+   </div>   
+     
+     
+     
+     
+     
+     
+     
+     
 	</div>
 	
 	
