@@ -25,7 +25,7 @@ input {
 header, #discount_wrap, #content {
   width: 100%; }
 
-#top, .discount, .search, .market, .top_line {
+#top, .discount, .content, .search, .market, .top_line, .tao_go, .tao_life, .tao_bale, .tao_buy, .tao_ad, .recommend {
   width: 1190px;
   margin: 0 auto; }
 
@@ -248,17 +248,20 @@ header {
 
 /****************content***************/
 #content {
-  background: url("") no-repeat; }
+  background: url("https://img.alicdn.com/tfs/TB16HnzhPuhSKJjSspdXXc11XXa-214-919.png") no-repeat left top, url("https://img.alicdn.com/tfs/TB1aynJhGagSKJjy0FaXXb0dpXa-274-919.png") no-repeat right top;
+  background: #F4F4F4; }
+
+.content {
+  background: #F4F4F4; }
 
 /****************search***************/
 .search {
-  overflow: hidden;
-  background: #fff; }
+  background: #fff;
+  height: 140px; }
   .search h1 {
     background: #ff1c3f;
     height: 140px;
     width: 190px;
-    padding-top: 24px;
     margin-right: 68px;
     float: left; }
   .search .search_m {
@@ -283,14 +286,32 @@ header {
         color: #fff;
         border-radius: 5px 5px 0 0; }
     .search .search_m .search_box {
+      position: relative;
       width: 626px;
       height: 36px;
       border: 2px solid #ff5608;
       border-radius: 20px;
       line-height: 36px; }
+      .search .search_m .search_box #search_mhid {
+        display: none;
+        position: absolute;
+        border: 1px solid #bebebe;
+        width: 550px;
+        height: 186px;
+        z-index: 2;
+        left: 0;
+        background: #fff; }
+        .search .search_m .search_box #search_mhid li {
+          padding: 0 6px;
+          height: 26px;
+          line-height: 26px;
+          color: #333; }
+          .search .search_m .search_box #search_mhid li:hover {
+            background: #F4F4F4;
+            color: #1071a8; }
       .search .search_m .search_box .icon-fangdajing {
         position: absolute;
-        left: 14px; }
+        left: 15px; }
       .search .search_m .search_box input {
         height: 30px;
         width: 510px;
@@ -309,6 +330,7 @@ header {
         float: right;
         background: linear-gradient(to right, #ff8e00, #ff5200); }
     .search .search_m .search_list {
+      padding: 0 4px;
       background: #fff;
       margin: 0;
       line-height: 30px; }
@@ -615,6 +637,15 @@ header {
 .top_line {
   background: #f4f4f4;
   height: 112px; }
+  .top_line .top_linel_mt {
+    font-size: 16px;
+    line-height: 30px;
+    color: #333; }
+    .top_line .top_linel_mt a {
+      float: right;
+      color: #999;
+      margin-right: 20px;
+      font-size: 12px; }
   .top_line .top_linel {
     margin-top: 12px;
     height: 100px;
@@ -633,8 +664,9 @@ header {
         margin-top: 10px;
         display: block; }
     .top_line .top_linel .top_linel_m {
+      cursor: pointer;
       width: 690px;
-      height: 96px;
+      height: 84px;
       padding-top: 16px;
       float: right; }
       .top_line .top_linel .top_linel_m img {
@@ -646,22 +678,322 @@ header {
         width: 528px;
         float: right;
         padding-left: 12px; }
-        .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mt {
-          font-size: 16px;
-          line-height: 30px;
-          color: #333; }
-          .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mt a {
-            float: right;
-            color: #999;
-            margin-right: 20px;
-            font-size: 12px; }
         .top_line .top_linel .top_linel_m .top_linel_txt .top_linel_mp {
           width: 514px;
-          color: #999; }
+          color: #999;
+          font-size: 14px; }
   .top_line .top_liner {
-    width: 290px;
+    width: 260px;
+    padding: 0 15px;
     height: 111px;
     background: #fff;
     float: right; }
+    .top_line .top_liner .top_linel_mt {
+      color: #3c3c3c;
+      font-size: 14px; }
+      .top_line .top_liner .top_linel_mt a {
+        color: #3c3c3c;
+        font-size: 12px; }
+    .top_line .top_liner .top_liner_img a {
+      float: left; }
+    .top_line .top_liner .top_liner_img img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      margin: 0 10px 8px; }
+
+/******************tao go***********************/
+.tao_go {
+  height: 164px;
+  margin: 10px auto; }
+  .tao_go li {
+    float: left; }
+  .tao_go .tao_gofirst img {
+    height: 164px; }
+  .tao_go .tao_gotwo ul {
+    width: 860px;
+    height: 164px;
+    background: url("https://img.alicdn.com/tfs/TB1_g_zbhrI8KJjy0FpXXb5hVXa-860-164.png") no-repeat;
+    margin-left: 1px; }
+  .tao_go .tao_gotwo li {
+    width: 121px;
+    height: 164px;
+    border-right: 1px solid #fff; }
+    .tao_go .tao_gotwo li a {
+      float: left;
+      padding: 10px 10px 0; }
+      .tao_go .tao_gotwo li a span {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        background: #fff;
+        border-radius: 5px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px; }
+        .tao_go .tao_gotwo li a span img {
+          height: 90px; }
+      .tao_go .tao_gotwo li a p {
+        text-align: center; }
+        .tao_go .tao_gotwo li a p b, .tao_go .tao_gotwo li a p em {
+          display: block;
+          font-size: 14px;
+          color: white; }
+
+/****************生活研究所*********************/
+.tao_life {
+  height: 166px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff; }
+  .tao_life h2 {
+    margin: 18px 20px;
+    color: #999;
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 24px;
+    overflow: hidden; }
+    .tao_life h2 img {
+      display: block;
+      height: 24px;
+      margin-right: 12px;
+      float: left; }
+    .tao_life h2 span {
+      display: block;
+      line-height: 24px;
+      float: left; }
+  .tao_life ul {
+    margin: 0 20px;
+    overflow: hidden; }
+    .tao_life ul li {
+      float: left;
+      width: 190px; }
+      .tao_life ul li:hover > a {
+        border: 1px solid red; }
+      .tao_life ul li:hover .tao_life_list1 > a {
+        color: red; }
+      .tao_life ul li > a {
+        display: block;
+        float: left;
+        width: 82px;
+        height: 82px;
+        border: 1px solid #22d3a6;
+        border-radius: 50%;
+        text-align: center;
+        overflow: hidden; }
+        .tao_life ul li > a img {
+          height: 78px; }
+      .tao_life ul li .tao_life_list1 {
+        float: left;
+        margin-left: 10px; }
+        .tao_life ul li .tao_life_list1 a {
+          display: block;
+          font-size: 16px;
+          color: #333;
+          margin: 12px 0 2px; }
+        .tao_life ul li .tao_life_list1 span {
+          display: block;
+          font-size: 14px;
+          color: #999;
+          line-height: 26px; }
+        .tao_life ul li .tao_life_list1 .icon-likefill {
+          font-size: 12px;
+          color: #13d0a1; }
+
+/****************标题********************/
+.tao_balet {
+  width: 550px;
+  padding: 0 20px;
+  background: #fff;
+  height: 63px;
+  line-height: 63px; }
+  .tao_balet .tao_balet_img {
+    float: left;
+    position: relative;
+    color: #999; }
+    .tao_balet .tao_balet_img .icon-erweima {
+      font-size: 12px;
+      color: #999;
+      float: left;
+      margin-right: 6px; }
+    .tao_balet .tao_balet_img .tao_balet_hid {
+      position: absolute;
+      z-index: 2;
+      display: none;
+      width: 86px;
+      height: 100px;
+      background: #fff;
+      top: 45px;
+      left: 60px;
+      border: 1px solid #f0f0f0; }
+      .tao_balet .tao_balet_img .tao_balet_hid img {
+        height: 64px;
+        width: auto;
+        margin: 10px 10px 0; }
+      .tao_balet .tao_balet_img .tao_balet_hid p {
+        text-align: center;
+        line-height: 24px;
+        color: #666; }
+  .tao_balet img {
+    float: left;
+    margin-top: 20px;
+    height: 23px;
+    margin-right: 10px; }
+  .tao_balet a {
+    color: #999;
+    float: right; }
+
+/****************有好货********************/
+.tao_bale {
+  height: 660px; }
+  .tao_bale .tao_bale_l {
+    float: left; }
+    .tao_bale .tao_bale_l .tao_bale_list {
+      padding: 0 20px;
+      width: 550px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-content: space-between;
+      overflow: hidden;
+      background: #fff; }
+      .tao_bale .tao_bale_l .tao_bale_list li {
+        text-align: center;
+        width: 179px;
+        height: 290px; }
+        .tao_bale .tao_bale_l .tao_bale_list li > a > img {
+          height: 179px; }
+        .tao_bale .tao_bale_l .tao_bale_list li > a {
+          display: block;
+          width: 179px;
+          height: 179px;
+          background: #f4f4f4; }
+          .tao_bale .tao_bale_l .tao_bale_list li > a:hover {
+            background: #ededed; }
+            .tao_bale .tao_bale_l .tao_bale_list li > a:hover p > a {
+              color: red; }
+        .tao_bale .tao_bale_l .tao_bale_list li p:hover a {
+          color: red; }
+        .tao_bale .tao_bale_l .tao_bale_list li p a {
+          display: block;
+          color: #3c3c3c;
+          font-size: 14px;
+          line-height: 38px; }
+        .tao_bale .tao_bale_l .tao_bale_list li p span {
+          display: block;
+          width: 170px;
+          overflow: hidden;
+          white-space: nowrap; }
+        .tao_bale .tao_bale_l .tao_bale_list li p .icon-emoji {
+          color: #35b1ff;
+          font-size: 12px;
+          line-height: 56px; }
+  .tao_bale .tao_bale_r {
+    float: right; }
+    .tao_bale .tao_bale_r h3 {
+      margin-top: 8px;
+      font-weight: 100; }
+      .tao_bale .tao_bale_r h3 a {
+        display: block;
+        font-size: 14px;
+        line-height: 24px;
+        overflow: hidden;
+        width: 179px;
+        height: 52px;
+        color: #999; }
+        .tao_bale .tao_bale_r h3 a:hover {
+          color: red; }
+      .tao_bale .tao_bale_r h3 span {
+        line-height: 48px; }
+        .tao_bale .tao_bale_r h3 span > img {
+          display: block;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          float: left;
+          margin-right: 8px;
+          margin-top: 16px; }
+        .tao_bale .tao_bale_r h3 span em {
+          float: left;
+          font-size: 12px; }
+
+/*--------------淘抢购---------------*/
+.tao_buy {
+  height: 224px;
+  padding: 20px 0;
+  background: #fff; }
+  .tao_buy .tao_buyt {
+    padding: 0 20px;
+    overflow: hidden;
+    line-height: 22px;
+    color: #999; }
+    .tao_buy .tao_buyt img {
+      height: 22px;
+      display: block;
+      margin-right: 10px; }
+    .tao_buy .tao_buyt img, .tao_buy .tao_buyt p {
+      line-height: 22px;
+      float: left; }
+    .tao_buy .tao_buyt a {
+      float: right;
+      color: #999; }
+  .tao_buy .tao_buy_list {
+    overflow: hidden;
+    margin: 22px 20px 0; }
+    .tao_buy .tao_buy_list li {
+      width: 382px;
+      height: 180px;
+      float: left; }
+      .tao_buy .tao_buy_list li > p:first-child {
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 180px;
+        background: #f4f4f4;
+        margin-right: 12px; }
+        .tao_buy .tao_buy_list li > p:first-child img {
+          width: 170px;
+          height: 170px; }
+      .tao_buy .tao_buy_list li > p:last-child {
+        float: left;
+        width: 170px;
+        height: 180px;
+        background: #fff; }
+        .tao_buy .tao_buy_list li > p:last-child a, .tao_buy .tao_buy_list li > p:last-child em, .tao_buy .tao_buy_list li > p:last-child span {
+          display: block; }
+        .tao_buy .tao_buy_list li > p:last-child a {
+          height: 44px;
+          color: #333;
+          font-size: 16px;
+          margin-top: 14px;
+          width: 168px;
+          line-height: 22px; }
+        .tao_buy .tao_buy_list li > p:last-child em {
+          line-height: 54px; }
+        .tao_buy .tao_buy_list li > p:last-child span {
+          font-size: 14px;
+          color: red;
+          line-height: 70px; }
+
+/*--------------广告区---------------*/
+.tao_ad {
+  height: 70px;
+  margin: 10px 0; }
+
+/*--------------推荐区---------------*/
+.recommend {
+  margin-bottom: 10px;
+  overflow: hidden; }
+  .recommend .recommend_l {
+    width: 590px;
+    height: 538px; }
+    .recommend .recommend_l .recommend_list {
+      margin: 0 20px; }
+      .recommend .recommend_l .recommend_list > li {
+        float: left;
+        height: 210px;
+        width: 270px; }
 
 /*# sourceMappingURL=style.css.map */

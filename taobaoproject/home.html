@@ -8,6 +8,7 @@
 		<script src="js/jquery-1.11.0.js"></script>
 		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/home.js" type="text/javascript" charset="utf-8"></script>
+		
 	</head>
 <body>
 	<!-----------------头部导航---------------------->
@@ -181,18 +182,21 @@
 	
 	<!-----------------content---------------------->
 	<div id="content">
-		
+		<div class="content">
 	<!-----------------search---------------------->	
 		<div class="search">
 			<h1><img src="https://img.alicdn.com/tfs/TB1PdY9XZLJ8KJjy0FnXXcFDpXa-190-140.gif" alt="" /></h1>
+<!-----------------搜索框---------------------->				
 		<div class="search_m">
-			
 			<p><a href="" class="search_baby">宝贝</a><a href="">天猫</a><a href="">店铺</a></p>
 			<div class="search_box">
-				<span class="iconfont icon-fangdajing" style="font-size:12px"></span>
-				<input type="text" />
+				<span class="iconfont icon-fangdajing" style="font-size:16px"></span>
+				<input type="text" id="txt"/>
 				<span class="iconfont icon-camera"></span>
 				<a href="" class="search_btn">搜索</a>
+				<ul id="search_mhid">
+					
+				</ul>
 			</div>
 			<p class="search_list"><a href="">半身裙</a><a href="">夹克外套</a><a href="">半身裙</a><a href="">夹克外套</a><a href="">夹克外套</a><a href="">夹克外套</a><a class="search_j">更多<span style="16px">＞</span></a></p>
 		</div>
@@ -260,7 +264,7 @@
 <!------------轮播内容区--------------->        	
         	<div class="market_rcont">
 <!------------轮播内容区右边---------------> 
-        		<div class="market_rcontr">
+         <div class="market_rcontr">
   <!--    轮播图  		-->	
         			<div id="sliderBox">
 			<ul id="sliderList">
@@ -359,25 +363,150 @@
    	  <div class="top_linel">
    	  	<h5><img src="img/t1.jpg" alt="" /><span>让你的生活更有趣</span></h5>
    	  	<div class="top_linel_m">
-   	  		<img src="" alt="" />
+   	  		<img src="https://img.alicdn.com/imgextra/i4/806178629/TB2DH03g6uhSKJjSspjXXci8VXa_!!806178629-0-beehive-scenes.jpg_120x120q90.jpg_.webp" alt="" />
    	  		<div class="top_linel_txt">
    	  			<p class="top_linel_mt">配置确认，华为Mate10国行开启预定<a href="#">更多 ></a></p>
-   	  			<p class="top_linel_mp">离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启</p>
+   	  			<p class="top_linel_mp">离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启德国慕尼黑发布会开启离华为在德国慕尼黑发布会开启离华为</p>
    	  		</div>
    	  	</div>
    	  </div>
    	  <div class="top_liner">
-   	  	
+   	  	<p class="top_linel_mt">阿里APP<a href="#">更多 ></a></p>
+   	  	<p class="top_liner_img">
+   	  		<!--<a href=""><img src="img/a1.jpg" alt="" />  </a>
+   	  		<a href=""><img src="" alt="" />  </a>
+   	  		<a href=""><img src="" alt="" />  </a>
+   	  		<a href=""><img src="" alt="" />  </a>
+   	  		<a href=""><img src="" alt="" />  </a>
+   	  		<a href=""><img src="" alt="" />  </a>
+   	  		<a href=""><img src="img/a1.jpg" alt="" />  </a>
+   	  		<a href=""><img src="img/a1.jpg" alt="" />  </a>
+   	  		<a href=""><img src="img/a1.jpg" alt="" />  </a>
+   	  		<a href=""><img src="img/a1.jpg" alt="" />  </a>-->
+   	  	</p>
    	  </div>
    </div>   
-     
-     
-     
-     
-     
-     
-     
-     
+<!---------------淘go---------------------->     
+     <ul class="tao_go">
+     	<li class="tao_gofirst"><a href="#"><img src="https://img.alicdn.com/tfs/TB1PLZsbNrI8KJjy0FpXXb5hVXa-248-164.gif"/> </a></li>
+     	<li class="tao_gotwo">
+     		<ul>
+     			<!--<li><a href="#">
+     				<span><img src="img/a1.jpg" alt="" /></span>
+     				<p><b>精品</b><em>拣货</em></p>
+     			</a></li>-->
+     		</ul>
+     	</li>
+     	
+     	<li><a href="#"><img src="https://img.alicdn.com/tfs/TB1wPnNbnnI8KJjy0FfXXcdoVXa-80-164.png"/> </a></li>
+     	
+     </ul>
+<!---------------生活研究所---------------------->      
+     <div class="tao_life">
+     	<h2><img src="https://img.alicdn.com/tfs/TB1o60degoQMeJjy1XaXXcSsFXa-180-48.png" alt="" /><span>发现属于你的生活方式</span></h2>
+     	<ul class="tao_life_list">
+     		<li>
+     			<a href="#"><img src=""/></a>
+     			<div class="tao_life_list1"><a href="#"></a><span></span ><span class="iconfont icon-likefill"></span></div>
+     		</li>
+     	</ul>
+     </div>   
+<!---------------有好货---------------------->      
+    <div class="tao_bale">
+    	<div class="tao_bale_l">
+    		<div class="tao_balet">
+    			<div class="tao_balet_img">
+    				<img src="https://img.alicdn.com/tfs/TB1tqpnegMPMeJjy1XcXXXpppXa-148-48.png" alt="" /><span class="iconfont icon-erweima"></span> 与品质生活不期而遇
+    				<div class="tao_balet_hid"><img src="img/e1.jpg" alt="" />
+    				<p>手机淘宝扫码</p>
+    				</div>
+    			</div>
+    			<a href="#">
+    				换一换
+    			</a>
+    		</div>
+    		<ul class="tao_bale_list"></ul>
+    	</div>
+    	<div class="tao_bale_l tao_bale_r">
+    		<div class="tao_balet">
+    			<div class="tao_balet_img">
+    				<img src="https://img.alicdn.com/tfs/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png" alt="" /> 献给聪明可爱的你  				
+    			</div>
+    			<a href="#">
+    				更多 >
+    			</a>
+    		</div>
+    		<ul class="tao_bale_list tao_bale_list_r"></ul>
+    		
+    	</div>
+    </div>  
+ <!--------------淘抢购---------------> 
+    <div class="tao_buy">
+    	<div class="tao_buyt">
+    		<img src="https://img.alicdn.com/tfs/TB1UfJnb3oQMeJjy0FpXXcTxpXa-160-44.png" alt="" />
+    		<p class="tao_buyt_count">距结束时间<span></span> : <span></span> : <span></span> </p>
+    		<a href="">换一换　　更多 ></a>
+    	</div>
+    	<ul class="tao_buy_list">
+    		<li>
+    			<p><img src="https://img.alicdn.com/tps/i3/0/TB2SgVFXXHM8KJjSZJiXXbx3FXa_!!0-juitemmedia.jpg_180x180q90.jpg_.webp" alt="" /></p>
+    		    <p>
+	    		 	<a href="#">一朵母婴旗舰店满300元-100元</a>
+	    		 	<em>满300减100</em>
+	    		 	<span class="iconfont icon-qian">1</span>
+    		    </p>
+    		</li>
+    		<li>
+    			<p><img src="https://img.alicdn.com/tps/i3/0/TB2SgVFXXHM8KJjSZJiXXbx3FXa_!!0-juitemmedia.jpg_180x180q90.jpg_.webp" alt="" /></p>
+    		    <p>
+	    		 	<a href="#">一朵母婴旗舰店满300元-100元</a>
+	    		 	<em>满300减100</em>
+	    		 	<span class="iconfont icon-qian">1</span>
+    		    </p>
+    		</li>
+    		<li>
+    			<p><img src="https://img.alicdn.com/tps/i3/0/TB2SgVFXXHM8KJjSZJiXXbx3FXa_!!0-juitemmedia.jpg_180x180q90.jpg_.webp" alt="" /></p>
+    		    <p>
+	    		 	<a href="#">一朵母婴旗舰店满300元-100元</a>
+	    		 	<em>满300减100</em>
+	    		 	<span class="iconfont icon-qian">1</span>
+    		    </p>
+    		</li>
+    	</ul>
+    </div>
+<!--------------广告区---------------> 
+    <div class="tao_ad">
+    	<img src="https://img.alicdn.com/simba/img/TB1EjzsnYsTMeJjSsziSuwdwXXa.jpg" alt="" />
+    </div>
+<!--------------推荐区---------------> 
+   <div class="recommend">
+   	    <div class="recommend_l">
+   	    	<div class="tao_balet">
+    			<div class="tao_balet_img">
+    				<img src="https://img.alicdn.com/tfs/TB1UNX2bSFRMKJjy0FhXXX.xpXa-112-46.png" alt="" /> 发现深藏的好店  				
+    			</div>
+    			<a href="#">
+    				更多 >
+    			</a>
+    		</div>
+    		<ul class="recommend_list">
+    			<li>
+    				<ul>
+					<li><span></span><em></em></li>
+					<li>
+						<p><img src="" alt="" />
+    			<img src="" alt="" /></p>
+    			</li>
+    				</ul>
+    			
+    		</ul>
+   	    </div>
+   	    <div class="recommend_l recommend_r">
+   	    	
+   	    </div>
+   </div> 
+
+     </div>
 	</div>
 	
 	

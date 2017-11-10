@@ -5,6 +5,7 @@ $(function(){
 		$(this).find("ul").css("display","none");
 	});
 	
+/****************轮播图************************/	
 (function($,undefined){
 				$.fn.slider = function(opts){
 					var defaults = {
@@ -110,7 +111,115 @@ $(function(){
 			})(jQuery)
 			
 			$("#sliderBox").slider({showNav:true,showBtns:true});
-	
-});
 
+/***************公告下小图标******************/
+		$.ajax({
+				type:"get",
+				url:"https://tce.alicdn.com/api/mget.htm?callback=?&tce_sid=1947680,1947683&tce_vid=0,0&tid=,&tab=,&topic=,&count=,&env=online,online",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+					var data=data.result[1947683].result;
+					str="";
+					for(var i =0;i<10;i++){
+						str+=`<a href="${data[i].link}"><img src="${data[i].img}"/></a>`;
+					}
+					$(".top_liner_img").html(str);
+				}
+			});
+/***********头部导航****************/
+	$.ajax({
+				type:"get",
+				url:"https://tce.alicdn.com/api/data.htm?callback=?&ids=175785",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+				var data=data[175785].value.map;
+					var data1=data[0].list;
+//					console.log(data,data1);	
+				}
+			});	
+/***********tao_go****************/	
+	$.get('json/json.json',function(data) {
+		var sst="";
+		for(let j=0;j<7;j++){
+			sst+=`<li><a href="#">
+     				<span><img src="${data[j].src}" alt="" /></span>
+     				<p><b>${data[j].name}</b><em>${data[j].title}</em></p>
+     			</a></li>`;		
+		}
+		$(".tao_gotwo").find("ul").html(sst);
+	});
+	
+/***********淘生活****************/		
+	$.ajax({
+			type:"get",
+			url:"https://tce.taobao.com/api/mget.htm?callback=?&tce_sid=1949464&tce_vid=2&tid=&tab=&topic=&count=&env=online&cna=1ZVpEhbRsnUCAQHA8nyEyiDd&pageSize=6",
+			async:true,
+			dataType:"jsonp",
+			success:function(data){
+	        var data=data.result[1949464].result[0].item;
+	        var oLiv="";
+	        for(var i=0;i<data.length;i++){
+	        	
+	        oLiv +=	`<li>
+     			<a href="#"><img src="${data[i].picUrl}"/></a>
+     			<div class="tao_life_list1"><a href="#">${data[i].title}</a><span>${data[i].subtitle}</span><span class="iconfont icon-likefill">人气${data[i].pop}</span></div>
+     		</li>`;
+	        }
+	     $(".tao_life_list").html(oLiv);
+	    }
+	});
+/***********好有货****************/	
+   $(".icon-erweima").hover(function(){
+   	   $(".tao_balet_hid").stop().slideDown(200);
+   },function(){
+   	   $(".tao_balet_hid").stop().slideUp(200);
+   });
+   /******商品列表*****/
+   $.ajax({
+				type:"get",
+				url:"https://tce.taobao.com/api/mget.htm?callback=?&tce_sid=1947676&tce_vid=1&tid=&tab=&topic=&count=&env=online&startIndex=0&pageSize=6",
+				async:true,
+				dataType:"jsonp",
+				success:function(data){
+                var data=data.result[1947676].result;
+                var btr="";
+                for(var i=0;i<data.length;i++){
+                 btr +=`<li><a href="#"><img src="${data[i].pic}" alt="" /></a>
+    				<p><a href="">${data[i].title}</a>
+ 					<span>${data[i].content}</span>
+    					<span class="iconfont icon-emoji">${data[i].zanTotal} 人说好</span>
+    				</p>
+    			</li>` 
+                }
+			$(".tao_bale_list").html(btr);
+	    }
+	});
+/******商品列表2*****/
+   $.ajax({
+				type:"get",
+				url:"https://tce.taobao.com/api/mget.htm?callback=?&tce_sid=1952191&tce_vid=1&tid=&tab=&topic=&count=&env=online&cna=1ZVpEhbRsnUCAQHA8nyEyiDd",
+				async:true,
+				dataType:"jsonp",
+				success:function(odata){
+                var odata=odata.result[1952191].result[0].item;
+                var ctr="";
+                for(var i=0;i<6;i++){
+                	var data1=odata[i].data;
+                 ctr +=`<li><a href="#"><img src="${data1.cover}" alt="" /></a>
+    				<h3><a href="">${data1.desc}</a>
+					<span><img src="${data1.forwardUserAvatar}" alt="" />
+					<em>${data1.forwardUserName}</em></span>
+    				</h3>
+    			</li>` 
+                }
+			$(".tao_bale_list_r").html(ctr);
+	    }
+	});
+
+
+
+
+})		
 
